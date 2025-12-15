@@ -1,4 +1,6 @@
 class Solution {
+
+   // Moore's Voting Algorithm
   public:
     int majorityElement(vector<int>& arr) {
         // code here
