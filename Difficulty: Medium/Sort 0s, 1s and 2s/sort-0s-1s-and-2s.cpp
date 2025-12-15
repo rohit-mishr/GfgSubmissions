@@ -1,4 +1,6 @@
 class Solution {
+
+// Dutch flag algortihm
   public:
     void sort012(vector<int>& arr) {
         // code here
