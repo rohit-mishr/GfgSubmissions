@@ -16,6 +16,7 @@ class Solution {
                 if(stalls[i] - stalls[prev]>=days){
                     num_cows++;
                     prev = i;
+                    if(num_cows>=k) break;
                 }
             }
             if(num_cows >= k){
