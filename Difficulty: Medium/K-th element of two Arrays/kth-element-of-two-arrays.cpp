@@ -18,7 +18,7 @@ class Solution {
             int cut2 = k - cut1;
             int l1 = (cut1==0)?INT_MIN:a[cut1-1];
             int l2 = (cut2==0)?INT_MIN:b[cut2-1];
-            int r1 = (cut1==n)?INT_MAX:a[cut1];
+            int r1 = (cut1==min(k,n))?INT_MAX:a[cut1];
             int r2 = (cut2==m)?INT_MAX:b[cut2];
             if(l1<=r2 && l2<=r1){
                 return max(l1,l2);
