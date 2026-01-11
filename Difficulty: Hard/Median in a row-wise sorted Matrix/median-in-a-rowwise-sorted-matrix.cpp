@@ -16,20 +16,7 @@ class Solution {
             int mid = low + (high-low)/2;
             int count = 0;
             for(auto i : mat){
-                int l = 0;
-                int h = c-1;
-                int index = -1;
-                while(l <= h){
-                    int m = l + (h-l)/2;
-                    if(i[m]<=mid){
-                        index = m;
-                        l = m + 1;
-                    }
-                    else{
-                        h = m - 1;
-                    }
-                }
-                count+=(index+1);
+                count+= (upper_bound(i.begin(),i.end(),mid) - i.begin());
             }
             if(count > half){
                 ans = mid;
