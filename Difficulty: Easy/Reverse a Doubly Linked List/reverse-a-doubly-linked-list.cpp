@@ -16,16 +16,16 @@ class Solution {
   public:
     Node *reverse(Node *head) {
         // code here
-        Node* list = new Node(head->data);
-        Node* curr = head->next;
+        Node* curr = head;
         while(curr!=NULL){
-            Node* temp = new Node(curr->data);
-            temp->next = list;
-            list->prev = temp;
-            list = temp;
-            curr=curr->next;
+            if(curr->next==NULL){
+                head = curr;
+            }
+            Node* temp = curr->next;
+            curr->next=curr->prev;
+            curr->prev=temp;
+            curr = curr->prev;
         }
-        list->prev=NULL;
-        return list;
+        return head;
     }
 };
